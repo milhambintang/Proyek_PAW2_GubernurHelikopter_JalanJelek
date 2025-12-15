@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h3>Tambah Pegawai</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nama" class="form-label">Nama</label>
+      <input type="text" class="form-control" id="nama" [(ngModel)]="pegawai.nama" name="nama" required>
+    </div>
+    <div class="mb-3">
+      <label for="nip" class="form-label">NIP</label>
+      <input type="text" class="form-control" id="nip" [(ngModel)]="pegawai.nip" name="nip" required>
+    </div>
+    <div class="mb-3">
+      <label for="jabatan" class="form-label">Jabatan</label>
+      <input type="text" class="form-control" id="jabatan" [(ngModel)]="pegawai.jabatan" name="jabatan" required>
+    </div>
+    <div class="mb-3">
+      <label for="status" class="form-label">Status</label>
+      <input type="text" class="form-control" id="status" [(ngModel)]="pegawai.status" name="status" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Simpan</button>
+  </form>
+</div>
