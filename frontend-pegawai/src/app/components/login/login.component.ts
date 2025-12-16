@@ -22,7 +22,6 @@ export class LoginComponent {
         this.authService.setToken(res.token);
         this.authService.setCurrentUser(res.user);
         alert('Login berhasil!');
-        this.router.navigate(['/pegawai']);
       },
       error: (err) => {
         alert('Login gagal: ' + err.error.message);

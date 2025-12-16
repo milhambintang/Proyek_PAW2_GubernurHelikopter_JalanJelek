@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Pegawai, PegawaiService } from '../../services/pegawai.service';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+// import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pegawai-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
+  // imports: [CommonModule, RouterLink],
   templateUrl: './pegawai-list.html',
   styleUrls: ['./pegawai-list.css']
 })

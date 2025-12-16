@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { Pegawai, PegawaiService } from '../../services/pegawai.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+// import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pegawai-form',
   standalone: true,
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule],
+  // imports: [FormsModule, RouterLink],
   templateUrl: './pegawai-form.html',
   styleUrls: ['./pegawai-form.css']
 })
