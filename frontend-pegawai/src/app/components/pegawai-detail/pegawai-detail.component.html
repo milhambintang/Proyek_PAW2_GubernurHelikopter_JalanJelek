@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <h3>Detail Pegawai</h3>
+  <div *ngIf="pegawai; else loading">
+    <div class="mb-3">
+      <strong>NIP:</strong> {{ pegawai.nip }}
+    </div>
+    <div class="mb-3">
+      <strong>Nama:</strong> {{ pegawai.nama }}
+    </div>
+    <div class="mb-3">
+      <strong>Tempat Lahir:</strong> {{ pegawai.tempat_lahir }}
+    </div>
+    <div class="mb-3">
+      <strong>Tanggal Lahir:</strong> {{ pegawai.tanggal_lahir }}
+    </div>
+    <div class="mb-3">
+      <strong>Jenis Kelamin:</strong> {{ pegawai.jenis_kelamin }}
+    </div>
+    <div class="mb-3">
+      <strong>Alamat:</strong> {{ pegawai.alamat }}
+    </div>
+    <div class="mb-3">
+      <strong>No Telepon:</strong> {{ pegawai.no_telepon }}
+    </div>
+    <div class="mb-3">
+      <strong>Email:</strong> {{ pegawai.email }}
+    </div>
+    <div class="mb-3">
+      <strong>Jabatan:</strong> {{ pegawai.jabatan }}
+    </div>
+    <div class="mb-3">
+      <strong>Tanggal Masuk:</strong> {{ pegawai.tanggal_masuk }}
+    </div>
+    <div class="mb-3">
+      <strong>Status:</strong> {{ pegawai.status }}
+    </div>
+    <button class="btn btn-secondary" (click)="goBack()">Kembali</button>
+  </div>
+
+  <ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>
+</div>

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Pegawai, PegawaiService } from '../../services/pegawai.service';
 import { CommonModule } from '@angular/common';
-// import { RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pegawai-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   // imports: [CommonModule, RouterLink],
   templateUrl: './pegawai-list.html',
   styleUrls: ['./pegawai-list.css']
@@ -37,5 +37,7 @@ export class PegawaiListComponent implements OnInit {
         this.loadPegawai(); // Refresh daftar
       });
     }
+    
+    // this.loadPegawai(); // Refresh daftar
   }
 }

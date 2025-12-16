@@ -15,6 +15,7 @@ import { DashboardComponent } from './app/components/dashboard/dashboard.compone
 
 import { AuthInterceptor } from './app/interceptors/auth.interceptor';
 import { AuthGuard } from './app/guards/auth.guard';
+import { PegawaiDetailComponent } from './app/components/pegawai-detail/pegawai-detail.component';
 
 const routes = [
   { path: '', component: LandingComponent }, // Landing page
@@ -23,6 +24,7 @@ const routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // Dashboard dilindungi
   { path: 'pegawai', component: PegawaiListComponent, canActivate: [AuthGuard] }, // Dilindungi
   { path: 'pegawai/tambah', component: PegawaiFormComponent, canActivate: [AuthGuard] }, // Dilindungi
+  { path: 'pegawai/:id', component: PegawaiDetailComponent, canActivate: [AuthGuard] }, // ⬅️ Tambahkan route ini
   { path: '**', redirectTo: '/' } // Redirect ke landing page
 ];
 

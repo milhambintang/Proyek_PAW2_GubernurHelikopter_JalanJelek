@@ -13,6 +13,4 @@ app.use('/api/pegawai', require('./routes/pegawaiRoutes'));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/klinikpegawai');
 
-app.use('/api/pegawai', require('./routes/pegawaiRoutes'));
-
 module.exports = app;

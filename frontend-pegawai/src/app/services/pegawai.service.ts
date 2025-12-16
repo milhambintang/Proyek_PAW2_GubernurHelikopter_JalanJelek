@@ -21,7 +21,7 @@ export interface Pegawai {
   providedIn: 'root'
 })
 export class PegawaiService {
-  private apiUrl = 'http://localhost:5000/api/pegawai';
+  private apiUrl = 'http://localhost:5000/api/pegawai'; // ⬅️ Ini benar
 
   constructor(private http: HttpClient) { }
 
@@ -30,7 +30,7 @@ export class PegawaiService {
   }
 
   addPegawai(data: Pegawai): Observable<Pegawai> {
-    return this.http.post<Pegawai>(this.apiUrl, data);
+    return this.http.post<Pegawai>(this.apiUrl, data); // ⬅️ Ini benar — tidak ada "/tambah"
   }
 
   updatePegawai(id: string, data: Pegawai): Observable<Pegawai> {
@@ -39,5 +39,9 @@ export class PegawaiService {
 
   deletePegawai(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+
+  getPegawaiById(id: string): Observable<Pegawai> {
+    return this.http.get<Pegawai>(`${this.apiUrl}/${id}`);
   }
 }

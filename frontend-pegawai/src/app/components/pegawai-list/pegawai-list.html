@@ -17,7 +17,10 @@
         <td>{{ p.jabatan }}</td>
         <td>{{ p.status }}</td>
         <td>
-          <button class="btn btn-danger btn-sm" (click)="deletePegawai(p._id!)">Hapus</button>
+          <!-- Tombol Hapus -->
+          <button class="btn btn-danger btn-sm me-2" (click)="deletePegawai(p._id!)">Hapus</button>
+          <!-- Tombol Lihat Detail -->
+          <a routerLink="/pegawai/{{ p._id }}" class="btn btn-info btn-sm">Lihat Detail</a>
         </td>
       </tr>
     </tbody>

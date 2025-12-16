@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { Pegawai, PegawaiService } from '../../services/pegawai.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-// import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pegawai-form',
   standalone: true,
   imports: [FormsModule],
-  // imports: [FormsModule, RouterLink],
   templateUrl: './pegawai-form.html',
   styleUrls: ['./pegawai-form.css']
 })
@@ -27,12 +25,9 @@ export class PegawaiFormComponent {
     status: ''
   };
 
-  constructor(private pegawaiService: PegawaiService, private router: Router) {
-    console.log('PegawaiFormComponent loaded'); // 🔥 Tambahkan ini
-  }
+  constructor(private pegawaiService: PegawaiService, private router: Router) {}
 
   onSubmit(): void {
-    console.log('Submitting:', this.pegawai); // 🔥 Tambahkan ini
     this.pegawaiService.addPegawai(this.pegawai).subscribe(() => {
       alert('Pegawai berhasil ditambahkan');
       this.router.navigate(['/pegawai']);
