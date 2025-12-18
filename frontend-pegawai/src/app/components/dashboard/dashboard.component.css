@@ -1,0 +1,12 @@
+/* Efek hover lift card */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tambahkan ikon Font Awesome */
+/* Pastikan kamu sudah mengimpor Font Awesome di index.html atau angular.json */

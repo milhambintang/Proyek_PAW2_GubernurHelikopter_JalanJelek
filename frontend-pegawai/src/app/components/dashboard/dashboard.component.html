@@ -1,36 +1,51 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-12">
-      <div class="card">
-        <div class="card-header">
-          <h4>Dashboard</h4>
+      <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center py-4">
+          <h4 class="mb-0">Dashboard</h4>
+          <p class="mb-0 text-light opacity-75">Sistem Manajemen Pegawai</p>
         </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5>Daftar Pegawai</h5>
-                  <p>Lihat semua data pegawai</p>
-                  <a routerLink="/pegawai" class="btn btn-primary">Lihat</a>
+        <div class="card-body py-5">
+          <div class="row g-4">
+            <!-- Card Daftar Pegawai -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm hover-lift">
+                <div class="card-body d-flex flex-column align-items-center text-center p-4">
+                  <div class="bg-primary bg-opacity-10 rounded-circle p-3 mb-3">
+                    <i class="fas fa-users fa-2x text-primary"></i>
+                  </div>
+                  <h5 class="card-title fw-bold">Daftar Pegawai</h5>
+                  <p class="card-text text-muted">Lihat semua data pegawai</p>
+                  <a routerLink="/pegawai" class="btn btn-outline-primary mt-auto">Lihat</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5>Tambah Pegawai</h5>
-                  <p>Tambah data pegawai baru</p>
-                  <a routerLink="/pegawai/tambah" class="btn btn-success">Tambah</a>
+
+            <!-- Card Tambah Pegawai -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm hover-lift">
+                <div class="card-body d-flex flex-column align-items-center text-center p-4">
+                  <div class="bg-success bg-opacity-10 rounded-circle p-3 mb-3">
+                    <i class="fas fa-user-plus fa-2x text-success"></i>
+                  </div>
+                  <h5 class="card-title fw-bold">Tambah Pegawai</h5>
+                  <p class="card-text text-muted">Tambah data pegawai baru</p>
+                  <a routerLink="/pegawai/tambah" class="btn btn-outline-success mt-auto">Tambah</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5>Profil</h5>
-                  <p>Lihat profil pengguna</p>
-                  <a class="btn btn-info">Lihat</a>
+
+            <!-- Card Profil -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm hover-lift">
+                <div class="card-body d-flex flex-column align-items-center text-center p-4">
+                  <div class="bg-info bg-opacity-10 rounded-circle p-3 mb-3">
+                    <i class="fas fa-user-circle fa-2x text-info"></i>
+                  </div>
+                  <h5 class="card-title fw-bold">Profil</h5>
+                  <p class="card-text text-muted">Lihat profil pengguna</p>
+                  <a routerLink="/profile" class="btn btn-outline-info mt-auto">Lihat</a>
                 </div>
               </div>
             </div>
